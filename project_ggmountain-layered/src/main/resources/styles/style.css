@@ -1,0 +1,27 @@
+.comboBox1{
+    -fx-background-radius: 5;
+}
+.loginTxt1{
+    -fx-background-radius: 5;
+}
+.loginTxt2{
+    -fx-background-radius: 5;
+}
+.homeBtn1{
+    -fx-background-radius: 10;
+}
+.homePane{
+    -fx-background-radius: 10;
+}
+.dashbuttons{
+    -fx-background-radius: 10;
+}
+.loginRec{
+    -fx-background-radius: 10;
+}
+.forgotPane{
+    -fx-background-radius: 10;
+}
+.employeeFeild{
+    -fx-background-radius: 10;
+}

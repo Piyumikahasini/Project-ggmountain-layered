@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="cashierChangingPane" prefHeight="650.0" prefWidth="1039.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.projectggmountain.controller.OrderFormController">
+   <children>
+      <ImageView fitHeight="650.0" fitWidth="1039.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/dashBord.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="347.0" layoutY="34.0" text="Order Placement" textFill="#e61a5a">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblOrder" layoutX="109.0" layoutY="325.0" opacity="0.77" prefHeight="267.0" prefWidth="843.0">
+         <columns>
+            <TableColumn fx:id="itemIdCol" prefWidth="107.33333587646484" text="Item ID" />
+            <TableColumn fx:id="itemNameCol" prefWidth="168.00001525878906" text="Item Name" />
+            <TableColumn fx:id="categortCol" prefWidth="124.6666259765625" text="Category" />
+            <TableColumn fx:id="qtyCol" minWidth="1.33331298828125" prefWidth="115.33331298828125" text="Quantity" />
+            <TableColumn fx:id="unitPriceCol" prefWidth="106.66668701171875" text="Unit Price" />
+            <TableColumn fx:id="totleCol" minWidth="0.0" prefWidth="130.66668701171875" text="Totle" />
+            <TableColumn fx:id="actionCol" minWidth="9.99993896484375" prefWidth="86.66664632161462" text="Action" />
+         </columns>
+      </TableView>
+      <Label layoutX="56.0" layoutY="111.0" text="Order ID:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="55.0" layoutY="172.0" text="Customer ID:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="55.0" layoutY="239.0" text="Item Name:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="428.0" layoutY="111.0" text="Order Date:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="427.0" layoutY="172.0" text="Customer Name:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="246.0" layoutY="239.0" text="Unit Price:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="795.0" layoutY="172.0" text="Item ID:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="addToCartBtn" layoutX="916.0" layoutY="292.0" mnemonicParsing="false" onAction="#addToCartOnAction" prefHeight="25.0" prefWidth="82.0" styleClass="employeeFeild" stylesheets="/styles/style.css" text="Add to Cart">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Label layoutX="443.0" layoutY="239.0" text="Quantity On Hand:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtQty" layoutX="840.0" layoutY="258.0" onAction="#txtQtyOnAction" prefHeight="25.0" prefWidth="160.0" styleClass="employeeFeild" stylesheets="/styles/style.css" />
+      <Label layoutX="642.0" layoutY="239.0" text="Category:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="841.0" layoutY="239.0" text="Quantity:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="793.0" layoutY="111.0" text="Order Time:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="57.0" layoutY="296.0" text="Delivery " textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="radioBtn" layoutX="109.0" layoutY="296.0" mnemonicParsing="false" onAction="#clickOnActionRadioBtn" text="Yes" textFill="WHITE" />
+      <Button fx:id="placeOrderBt" layoutX="842.0" layoutY="614.0" mnemonicParsing="false" onAction="#clickOnActionPlaceOrder" text="Place Order">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <ComboBox fx:id="txtCustId" layoutX="54.0" layoutY="193.0" onAction="#cobCustOnAction" prefHeight="25.0" prefWidth="205.0" />
+      <ComboBox fx:id="txtItemId" layoutX="793.0" layoutY="193.0" onAction="#cobItemOnAction" prefHeight="25.0" prefWidth="205.0" />
+      <Label fx:id="lblItemName11" layoutX="52.0" layoutY="262.0" prefHeight="17.0" prefWidth="138.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblItemUnitPrice" layoutX="246.0" layoutY="262.0" prefHeight="17.0" prefWidth="138.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblItemQtyOnHand" layoutX="443.0" layoutY="262.0" prefHeight="17.0" prefWidth="138.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblItemCategory" layoutX="642.0" layoutY="262.0" prefHeight="17.0" prefWidth="138.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblOrderId" layoutX="118.0" layoutY="111.0" prefHeight="17.0" prefWidth="138.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblOrderDate" layoutX="504.0" layoutY="111.0" prefHeight="17.0" prefWidth="138.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblOrderTime" layoutX="870.0" layoutY="112.0" prefHeight="17.0" prefWidth="138.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblCustName" layoutX="531.0" layoutY="172.0" prefHeight="17.0" prefWidth="138.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="167.0" layoutY="612.0" text="Net Total:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblNetTotle" layoutX="229.0" layoutY="612.0" prefHeight="17.0" prefWidth="138.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtpaidamount" layoutX="474.0" layoutY="608.0" onKeyTyped="#txtpaidamountKeyTyped" prefHeight="25.0" prefWidth="95.0" />
+      <Label layoutX="389.0" layoutY="613.0" text="Paid Amount:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="618.0" layoutY="612.0" text="Balance:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="balancelbl" layoutX="669.0" layoutY="612.0" prefHeight="17.0" prefWidth="95.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblmoreneeded" layoutX="389.0" layoutY="635.0" text="More money needed:" textFill="RED">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtmoremoney" layoutX="504.0" layoutY="635.0" textFill="RED">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

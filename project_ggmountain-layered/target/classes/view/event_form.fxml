@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import jfxtras.scene.control.LocalTimeTextField?>
+
+<AnchorPane fx:id="cashierChangingPane" prefHeight="650.0" prefWidth="1039.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.projectggmountain.controller.EventFormController">
+   <children>
+      <ImageView fitHeight="650.0" fitWidth="1039.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/dashBord.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="385.0" layoutY="38.0" text="Event Management" textFill="#e61a5a">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtEventId" layoutX="427.0" layoutY="130.0" onMousePressed="#txtEventIdOnMousePressed" prefHeight="25.0" prefWidth="205.0" styleClass="employeeFeild" stylesheets="/styles/style.css" />
+      <TextField fx:id="txtEventName" layoutX="795.0" layoutY="130.0" prefHeight="25.0" prefWidth="205.0" styleClass="employeeFeild" stylesheets="/styles/style.css" />
+      <TextField fx:id="txtEventType" layoutX="56.0" layoutY="258.0" prefHeight="25.0" prefWidth="205.0" styleClass="employeeFeild" stylesheets="/styles/style.css" />
+      <DatePicker fx:id="txtEventDate" layoutX="427.0" layoutY="258.0" prefHeight="25.0" prefWidth="205.0" />
+      <TableView fx:id="tblEvent" layoutX="185.0" layoutY="362.0" opacity="0.77" prefHeight="267.0" prefWidth="691.0">
+         <columns>
+            <TableColumn fx:id="empIdCol" prefWidth="76.00003051757812" text="Employee ID" />
+            <TableColumn fx:id="eventIdCol" prefWidth="82.66666412353516" text="Event ID" />
+            <TableColumn fx:id="eventNameCol" prefWidth="133.3332977294922" text="Event Name" />
+            <TableColumn minWidth="0.0" prefWidth="1.33331298828125" text="C2" />
+            <TableColumn fx:id="eventDateCol" prefWidth="121.33331298828125" text="Date" />
+            <TableColumn fx:id="eventTimeCol" prefWidth="127.33334350585938" text="Time" />
+            <TableColumn fx:id="eventTypeCol" prefWidth="145.33331298828125" text="Event Type" />
+         </columns>
+      </TableView>
+      <Label layoutX="56.0" layoutY="111.0" text="Employee ID:" textFill="WHITE" />
+      <Label layoutX="56.0" layoutY="236.0" text="Event Type:" textFill="WHITE" />
+      <Label layoutX="428.0" layoutY="111.0" text="Event ID:" textFill="WHITE" />
+      <Label layoutX="428.0" layoutY="236.0" text="Event Date:" textFill="WHITE" />
+      <Label layoutX="795.0" layoutY="111.0" text="Event Name:" textFill="WHITE" />
+      <Label layoutX="795.0" layoutY="236.0" text="Event Time:" textFill="WHITE" />
+      <Button fx:id="btnSave" layoutX="738.0" layoutY="302.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="25.0" prefWidth="72.0" styleClass="employeeFeild" stylesheets="/styles/style.css" text="Save">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnUpdate" layoutX="826.0" layoutY="302.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="25.0" prefWidth="72.0" styleClass="employeeFeild" stylesheets="/styles/style.css" text="Update">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnDelete" layoutX="916.0" layoutY="302.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="25.0" prefWidth="72.0" styleClass="employeeFeild" stylesheets="/styles/style.css" text="Delete">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <TextField fx:id="txtSearch" layoutX="795.0" layoutY="54.0" onAction="#txtSearchOnAction" onKeyTyped="#txtSearchKeyTyped" opacity="0.83" prefHeight="25.0" prefWidth="205.0" promptText="Search by ID" styleClass="employeeFeild" stylesheets="/styles/style.css" />
+      <ImageView fx:id="searchIcon" fitHeight="25.0" fitWidth="18.0" layoutX="970.0" layoutY="58.0" onMousePressed="#searchIconOnMousePressed" opacity="0.37" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="/assets/search.png" />
+         </image>
+      </ImageView>
+      <ComboBox fx:id="comEmpId" layoutX="56.0" layoutY="130.0" prefHeight="25.0" prefWidth="205.0" />
+      <LocalTimeTextField fx:id="txtEventTime" layoutX="795.0" layoutY="258.0" prefHeight="25.0" prefWidth="205.0" />
+      <Label fx:id="lblinvalideventid" layoutX="481.0" layoutY="111.0" prefHeight="17.0" prefWidth="82.0" text="Invalid Event ID" textFill="RED">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

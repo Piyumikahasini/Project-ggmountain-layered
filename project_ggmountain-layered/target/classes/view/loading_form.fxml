@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="loadingPane" prefHeight="349.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.projectggmountain.controller.LoadingController">
+   <children>
+      <ImageView fitHeight="369.0" fitWidth="700.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/loading.png" />
+         </image>
+      </ImageView>
+      <ProgressBar fx:id="proBar" layoutX="60.0" layoutY="306.0" prefHeight="9.0" prefWidth="200.0" progress="0.0" />
+   </children>
+</AnchorPane>
